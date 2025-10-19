@@ -1,18 +1,13 @@
 # Terraformで作るAWS S3バケットポートフォリオ
 
 ## 概要
-このプロジェクトは、Terraformを使用してAWS上にS3バケットを自動作成するデモです。
+このプロジェクトは、Terraformを使用してAWS上にS3バケットを自動作成するデモです。  
 PowerShellでTerraformを実行し、AWS CLIで認証情報を設定して作成しました。
 
 ## 技術スタック
 - AWS CLI
 - Terraform
 - PowerShell
-
-## デモ手順
-1. AWS CLIで認証情報を設定
-```bash
-aws configure
 
 ## 実行結果スクショ
 
@@ -25,9 +20,11 @@ aws configure
 ![Terraform実行結果2](./PowerShellでのTerraform実行結果 (2).png)
 *terraform apply → S3作成、terraform destroy → 削除が確認できる*
 
-## Terraformコードのポイント
-- `provider "aws"` : AWSの認証情報とリージョンを指定
-- `resource "aws_s3_bucket"` : S3バケットを作成
+## デモ手順
+1. AWS CLIで認証情報を設定
+```bash
+aws configure
+
 - `bucket` 名前はグローバルで一意にする必要あり
 - `acl = "private"` でバケットを非公開に設定
 
