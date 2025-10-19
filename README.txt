@@ -13,3 +13,11 @@ PowerShellでTerraformを実行し、AWS CLIで認証情報を設定して作成
 1. AWS CLIで認証情報を設定
 ```bash
 aws configure
+
+## 学んだこと
+
+Infrastructure as Code(IaC)の基本概念
+Terraformの初期化、適用、削除の流れ
+AWS CLIによる認証設定
+S3バケットの作成・確認・削除操作
+GitHubでポートフォリオとして管理する方法
