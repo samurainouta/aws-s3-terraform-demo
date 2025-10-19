@@ -14,8 +14,13 @@ PowerShellでTerraformを実行し、AWS CLIで認証情報を設定して作成
 ```bash
 aws configure
 
-## 学んだこと
+## Terraformコードのポイント
+- `provider "aws"` : AWSの認証情報とリージョンを指定
+- `resource "aws_s3_bucket"` : S3バケットを作成
+- `bucket` 名前はグローバルで一意にする必要あり
+- `acl = "private"` でバケットを非公開に設定
 
+## 学んだこと
 Infrastructure as Code(IaC)の基本概念
 Terraformの初期化、適用、削除の流れ
 AWS CLIによる認証設定
