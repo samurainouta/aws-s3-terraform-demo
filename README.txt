@@ -14,6 +14,17 @@ PowerShellでTerraformを実行し、AWS CLIで認証情報を設定して作成
 ```bash
 aws configure
 
+## 実行結果スクショ
+
+### AWSコンソール
+![AWSコンソール](./AWSコンソール.png)
+*作成されたS3バケットが表示されていることを確認*
+
+### PowerShellでのTerraform実行結果
+![Terraform実行結果](./PowerShellでのTerraform実行結果.png)
+![Terraform実行結果2](./PowerShellでのTerraform実行結果 (2).png)
+*terraform apply → S3作成、terraform destroy → 削除が確認できる*
+
 ## Terraformコードのポイント
 - `provider "aws"` : AWSの認証情報とリージョンを指定
 - `resource "aws_s3_bucket"` : S3バケットを作成
